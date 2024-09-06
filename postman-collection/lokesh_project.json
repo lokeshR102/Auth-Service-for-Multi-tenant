@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "496f57b5-321b-4bfa-a468-374802cd78b8",
+		"name": "Lokesh App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28047560"
+	},
+	"item": [
+		{
+			"name": "Stats",
+			"item": [
+				{
+					"name": "Stats Rolewise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/stats/rolewise_users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stats",
+								"rolewise_users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stats Orgwise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/stats/orgwise_members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stats",
+								"orgwise_members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stats OrgRole Wise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/stats/org_rolewise_users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stats",
+								"org_rolewise_users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sign Up Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test1@test.com\",\n    \"password\":\"test@123\",\n    \"org_name\":\"TEST\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test1@test.com\",\n    \"password\":\"test@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNTYzNDEyNSwianRpIjoiMTM3YzZmMmMtZjQwMi00ZGFmLTg4MDEtYWZiYzIxMWJkYjZmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NCwibmJmIjoxNzI1NjM0MTI1LCJjc3JmIjoiMzc0MzBlZDMtMTJjYS00Y2ViLTkxNzYtMDA2NjdkNDY5MTU2IiwiZXhwIjoxNzI1NjM1MDI1fQ.aaQDb48eLhUVH_pMIpX7ZUn8sCzT5Yjfwr7KMR-ufGc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"new_password\":\"ddddd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/reset_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"reset_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Member Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNTYzNDEyNSwianRpIjoiMTM3YzZmMmMtZjQwMi00ZGFmLTg4MDEtYWZiYzIxMWJkYjZmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NCwibmJmIjoxNzI1NjM0MTI1LCJjc3JmIjoiMzc0MzBlZDMtMTJjYS00Y2ViLTkxNzYtMDA2NjdkNDY5MTU2IiwiZXhwIjoxNzI1NjM1MDI1fQ.aaQDb48eLhUVH_pMIpX7ZUn8sCzT5Yjfwr7KMR-ufGc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/delete_member/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"delete_member",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
